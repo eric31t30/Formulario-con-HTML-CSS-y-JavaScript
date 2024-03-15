@@ -5,3 +5,7 @@
 -Validación de campos en tiempo real para garantizar la entrada de datos correcta.
 
 Puede ver la demostracion con github-pages.
+
+<div id="header" align="center">
+	<img src="./imagenes/imagen-formulario-prueba.png">
+</div>
