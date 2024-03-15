@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>formulario</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css"></link>
+</head>
+<body>
+
+	
+
+	<form class="form" novalidate>
+		<h2 class="form-tittle">Inicia <span>Sesion</span></h2>
+		
+		<div class="muñeco">
+			<div class="ojos">
+				<div class="ojo-izq ojos-diseño"></div>
+				<div class="ojo-der ojos-diseño"></div>
+			</div>
+		</div>
+
+		<div class="form-container">
+			<div class="form-group">
+				<input type="text" id="user" class="form-input" placeholder=" "  minlength="6" 
+				autocomplete="off" required>
+				<label for="name"  class="form-label">Usuario:</label>
+				<div class="punto punto-user"></div>
+				<span class="form-line"></span>
+				<div class="texto-invalido texto-inv1"></div>
+			</div>
+
+			<div class="form-group">
+				<input type="email" id="email" class="form-input" placeholder=" " minlength="6"
+				autocomplete="of" required>
+				<label for="name"  class="form-label">email:</label>
+				<div class="punto punto-email"></div>
+				<span class="form-line"></span>
+				<div class="texto-invalido texto-inv2"></div>
+			</div>
+
+			<div class="form-group" autocomplete="off">
+				<input type="password" id="password" class="form-input" placeholder=" " 
+				autocomplete="off"  minlength="8" required>
+				<label for="name"  class="form-label" autocomplete="off">Contraseña:</label>
+				<div class=" punto-password">
+					<span class="mostrar-contra-deco"></span>
+				</div>
+				<span class="form-line"></span>
+				<div class="texto-invalido texto-inv3"></div>
+			</div>
+
+
+			<p class="registrate">¿Aun no tienes cuenta? <a href="#">Registrate</a></p>
+			
+			
+			
+			<input type="submit" class="form-submit" value="Entrar">
+			<a href="#" class="form-olvidar">¿olvidastes tu <span>contraseña</span>?</a>
+
+		</div>
+
+	</form>
+
+	<div class='cont-author'>
+		<a class='author' href='https://github.com/eric31t30' target='_blank'>eric31t30</a>
+		<img src='./imagenes/github.png' alt="" class='github-icon'/>
+	</div>
+
+	<script src="codigo.js"></script>
+</body>
+</html>

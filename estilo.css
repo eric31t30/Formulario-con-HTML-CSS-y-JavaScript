@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+@import url('https://fonts.cdnfonts.com/css/hero-4');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color: #0302077e;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background-image: url(imagenes/fondo-página2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    overflow: hidden;
+}
+
+
+
+.form{
+    margin: auto;
+    z-index: 1;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: rgb(243, 243, 243);
+    backdrop-filter: blur(2px);
+    width: 90%;
+    max-width: 380px;
+    padding: 2em 2.8em;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.form-tittle{
+    font-size: 2rem;
+    margin-bottom: .5em;
+    padding-bottom: .4em;
+}
+
+.form-tittle span{
+    color: blueviolet;
+}
+
+.muñeco{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(19, 19, 19);
+    margin: auto;
+    width: 150px;
+    height: 100px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+:root{
+    --input-proceso: rgb(253, 130, 7);
+    --input-listo: rgb(25, 247, 5);
+    --input-error: rgb(242, 7, 7);
+    --ojos-blanco: rgb(247, 246, 246);
+}
+
+.ojos{
+    position: absolute;
+    top: 60px;
+    bottom: 0px;
+    left: 75px;
+    right: 0px;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease;
+}
+
+.ojos-mov{
+    top: 75px;
+    left: 60px;
+}
+
+.ojos-diseño{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    left: 0px;
+    top: 0px;
+    background-color: var(--ojos-blanco);
+    animation: ojos-animacion 10s step-end infinite;
+}
+
+
+.ojo-izq{
+    margin-right: 60px;
+}
+
+.ojo-der{
+    margin-left: 60px;
+}
+
+
+.form-container{
+    margin-top: 1.7em;
+    display: grid;
+    gap: 1.7em;
+}
+
+.form-group{
+    position: relative;
+    color: var(--color);
+    font-weight: bold;
+}
+
+.form-input{
+    width: 100%;
+    background: none;
+    color: black;
+    font-size: 1rem;
+    padding: .5em .3em .3em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+}
+
+
+.punto{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 0px;
+    bottom: 10px;
+    border-radius: 50%;
+    background-color: var(--input-error);
+    box-shadow: 0px 0px 10px rgb(255, 0, 0),0px 0px 15px rgb(255, 0, 0);
+}
+
+.punto-password{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    right: 0px;
+    bottom: 10px;
+    background-image: url(imagenes/ojo2.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 2px var(--input-error));
+}
+
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label{
+    transform: translateY(-9px) scale(.8);
+    transform-origin: left top;
+}
+
+
+.form-label{
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+    pointer-events: none;
+}
+
+.registrate{
+    position: relative;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    left: -30px;
+}
+
+.registrate a{
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.form-submit{
+    font-family: 'Noto Sans', sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    letter-spacing: .1em;
+    font-size: 1rem;
+    padding: .5em  0;
+    border-radius: .5em;
+    border-color: blueviolet;
+    cursor: pointer;
+    transition: all .2s ease;
+    background-color: rgb(243, 243, 243);
+}
+
+.form-submit:hover{
+    box-shadow: 0px 0px 20px rgba(137, 43, 226, 0.613), inset 0px 0px 20px rgba(137, 43, 226, 0.414);
+    color: blueviolet;
+}
+
+.form-olvidar{
+    position: relative;
+    top: -1em;
+    font-family: 'Noto Sans', sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: .5em  0;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.form-olvidar span{
+    color: blueviolet;
+}
+
+
+.form-line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--input-proceso);
+    transform: scale(0);
+    transform-origin: left bottom;
+    transition: transform .4s;
+}
+
+
+.texto-invalido{
+    position: absolute;
+    color: rgb(228, 17, 17,1);
+    font-family: 'Noto Sans', sans-serif;
+    font-size: .8em;
+    
+}
+
+.mostrar-contra{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(imagenes/ojo2.png);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-top: .2em;
+    margin-right: .4em;
+    cursor: pointer;
+}
+
+.mostrar-contra-deco{
+    position: absolute;
+    width: 19px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(320deg);
+    transition: all .2s ease-out;
+    pointer-events: none;
+}
+
+.checkbox-texto{
+    font-weight: 600;
+    display: block;
+    font-size: 15px;
+}
+
+
+.form-input:focus ~ .form-line,
+.form-input:not(:placeholder-shown) ~ .form-line{
+    transform: scale(1);
+}
+
+
+@media (max-width:425px){
+
+    .form-tittle{
+        font-size: 1.8rem;
+    }
+}
+
+
+:root{
+    --ojos-animacion-inicio: rgb(247, 246, 246);
+    --ojos-animacion-osc: rgb(19, 19, 19);
+}
+
+
+@keyframes ojos-animacion{
+    0%{
+        background-color: var(--ojos-animacion-inicio);
+    }
+
+    20%{
+        background-color:rgb(19, 19, 19);
+    }
+
+    22%{
+        background-color: var(--ojos-animacion-inicio);
+    }
+    
+    24%{
+        background-color:rgb(19, 19, 19);
+    }
+
+    26%{
+        background-color: var(--ojos-animacion-inicio);
+    }
+
+
+    70%{
+        background-color:rgb(19, 19, 19);
+    }
+
+    72%{
+        background-color: var(--ojos-animacion-inicio);
+    }
+    
+    75%{
+        background-color:rgb(19, 19, 19);
+    }
+
+    78%{
+        background-color: var(--ojos-animacion-inicio);
+    }
+    
+    97%{
+        background-color:rgb(19, 19, 19);
+    }
+
+
+    100%{
+        background-color:var(--ojos-animacion-inicio);
+    }
+}
+
+
+.form-input:valid ~ .form-line{
+    background-color: var(--input-listo);
+}
+
+.form-input:focus ~ .form-line{
+    background-color: var(--input-proceso);
+}
+
+
+.form-input:focus ~ .punto{
+    background-color: var(--input-proceso);
+    box-shadow: 0px 0px 10px var(--input-proceso),0px 0px 15px var(--input-proceso);
+}
+
+.form-input:focus ~ .punto-user{
+    background-color: var(--input-proceso);
+    box-shadow: 0px 0px 10px var(--input-proceso),0px 0px 15px var(--input-proceso);
+}
+
+.form-input:valid ~ .punto{
+    background-color: var(--input-listo);
+    box-shadow: 0px 0px 10px var(--input-listo),0px 0px 15px var(--input-listo);
+}
+
+
+.form-input:focus ~ .punto-password{
+    filter: drop-shadow(0px 0px 2px var(--input-proceso));
+}
+
+.form-input:valid ~ .punto-password{
+    filter: drop-shadow(0px 0px 2px var(--input-listo));
+}
+
+.form-input:invalid ~ .punto-password{
+    filter: drop-shadow(0px 0px 2px var(--input-error));
+}
+
+
+.cont-author{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.author{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Hero', sans-serif;
+}
+
+.author:hover{
+    border-bottom: 1px solid white;
+}
+
+.github-icon{
+    margin-left: 5px;
+}
+
+
+@media (max-width: 719px){
+
+    .form{
+        width: 80%;
+        padding: 1em 2.3em;
+    }
+
+    .form-tittle{
+        padding: 0px;
+    }
+
+    .form-container{
+        margin-top: 1em;
+        gap: 1.4em;
+    }
+
+    .form-group{
+        font-size: 12px;
+    }
+
+    .registrate{
+        font-size: 13px;
+        left: 0px;
+    }
+
+    .form-olvidar{
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 720px) and (max-width:1299px){
+
+    .form{
+        width: 100%;
+        padding: 1.6em 2em;
+    }
+
+    .form-tittle{
+        margin-bottom: 1em;
+    }
+
+    .form-container{
+        margin-top: 2em;
+        gap: 2.5em;
+    }
+
+    .form-input{
+        font-size: 1.4em;
+    }
+
+    .form-label{
+        font-size: 1em;
+    }
+
+    .registrate{
+        font-size: 18px;
+        left: 0px;
+    }
+
+    .form-olvidar{
+        font-size: 18px;
+    }
+}
